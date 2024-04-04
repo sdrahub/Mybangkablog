@@ -1,0 +1,58 @@
+<%- include("./partials/header"); -%>
+
+<section class="lightblue-section" id="features">
+  <div class="container mt-5">
+    <img
+      class="testimonial-image"
+      src="/images/places/tanjungkalian7.jpg"
+      alt="tanjungkalian7"
+    />
+    <h1>Login</h1>
+
+    <div class="row">
+      <div class="col-sm-8">
+        <div class="card">
+          <div class="card-body">
+            <!-- Makes POST request to /login route -->
+            <form action="/login" method="POST">
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" name="username" />
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" name="password" />
+              </div>
+              <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-4">
+        <div class="card">
+          <div class="card-body">
+            <a class="btn btn-block" href="/auth/google" role="button">
+              <img
+                src="https://static.tacdn.com/img2/google/G_color_20x20.png"
+              />
+              Sign In with Google
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="d-grid gap-2 d-md-block">
+        <a href="/signin" class="post-button btn btn-outline-primary"
+          >Back to SignIn</a
+        >
+      </div>
+    </div>
+    <img
+      class="testimonial-image"
+      src="/images/places/lengkuas.jpg"
+      alt="lengkuas"
+    />
+  </div>
+</section>
+<%- include("./partials/footer"); -%>

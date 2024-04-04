@@ -1,0 +1,34 @@
+<%- include("./partials/header"); -%>
+<section id="comments" class="lightblue-section">
+  <main class="container">
+    <div class="row row-centered pos">
+      <div class="col-12 col-md-6 col-centered">
+        <div class="container-fluid">
+          <img
+            class="bd-placeholder-img card-img-top stroll-image-ext"
+            src="/images/places/pantaidindingbatu-rev1.jpg"
+            alt="Batu Dinding"
+          />
+          <h3 class="text-home text-h3">Title: <%=post.title%></h3>
+          <p class="text-home text-h5">Author: <%=post.author%></p>
+          <p class="text-home text-h3">Content: <%=post.content%></p>
+          <div class="col-lg-8 col-xs-12 col-centered">
+            <a
+              href="/contact"
+              class="post-button btn btn-outline-primary button-logout"
+              >Back to Contact</a
+            >
+          </div>
+
+          <img
+            class="testimonial-image"
+            src="/images/places/TanjungKelayang.png"
+            alt="Tanjung Kelayang"
+          />
+        </div>
+      </div>
+    </div>
+  </main>
+</section>
+
+<%- include("./partials/footer"); -%>

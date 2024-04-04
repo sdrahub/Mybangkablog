@@ -1,0 +1,54 @@
+<%- include("./partials/header"); -%>
+<div class="container mt-5">
+  <img
+    class="testimonial-image"
+    src="/images/places/pgkpinang.png"
+    alt="pangkalpinang"
+  />
+  <h1>Register</h1>
+
+  <div class="row">
+    <div class="col-sm-8">
+      <div class="card">
+        <div class="card-body">
+          <!-- Makes POST request to /register route -->
+          <form action="/register" method="POST">
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" name="username" />
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" class="form-control" name="password" />
+            </div>
+            <button type="submit" class="btn btn-primary">Register</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-4">
+      <div class="card">
+        <div class="card-body">
+          <a class="btn btn-block" href="/auth/google" role="button">
+            <img src="https://static.tacdn.com/img2/google/G_color_20x20.png" />
+            Sign In with Google
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="d-grid gap-2 d-md-block">
+      <a href="/signin" class="post-button btn btn-outline-primary"
+        >Back to SignIn</a
+      >
+    </div>
+  </div>
+  <img
+    class="testimonial-image"
+    src="/images/places/batuberlayar.jpg"
+    alt="batuberlayar1"
+  />
+</div>
+
+<%- include("./partials/footer"); -%>

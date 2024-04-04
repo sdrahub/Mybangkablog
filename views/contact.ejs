@@ -1,0 +1,82 @@
+<%- include("./partials/header"); -%>
+<section class="lightblue-section" id="contact">
+  <main class="container">
+    <div class="row g-5">
+      <div>
+        <div class="container-fluid">
+          <h3 class="about-text text-h1">Contact Me</h3>
+
+          <p class="text-home">
+            Have some comments, feedback or questions about this blog? Here are
+            two very easy ways to contact me:
+          </p>
+        </div>
+        <div class="features-box">
+          <ol>
+            <li>
+              <h5 class="text-h5">By Email:</h5>
+              <p class="text-home">
+                You can email me at hello@gmail.com for anything NOT related to
+                guest posting.
+              </p>
+            </li>
+            <li>
+              <h5 class="text-h5">Comment through this blog</h5>
+              <p class="text-home">
+                If you have a specific question about a post, simply leave a
+                comment on that very post and I’ll reply as soon as I can. But
+                if you have a generic question that doesn’t fit anywhere else,
+                simply leave a comment below!
+              </p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="text-h2">Compose</h2>
+    <form class="comment-text" action="/compose" method="post">
+      <div class="form-group">
+        <label>Title</label>
+        <input class="form-control" type="text" name="postTitle" />
+        <label>Author</label>
+        <input class="form-control" type="text" name="postAuthor" />
+      </div>
+      <label>Post</label>
+      <textarea
+        class="form-control"
+        name="postBody"
+        rows="5"
+        cols="30"
+      ></textarea>
+
+      <button class="btn btn-primary button-logout" type="submit" name="button">
+        Publish
+      </button>
+    </form>
+    <h2 class="text-h2">Comments</h2>
+    <% /* Display other posts */ %> <% posts.forEach(function(post) { %>
+    <div class="comment-text">
+      <!-- Display information for other posts -->
+      <h3 class="text-home text-h3">Title: <%= post.title %></h3>
+      <p class="text-home text-h5">Author: <%= post.author %></p>
+      <p class="text-home text-h3">
+        Content: <%= post.content.substring(0, 100) + " ..." %>
+      </p>
+      <a href="/post/<%= post._id %>">Read More</a>
+      <!-- Link to view the full content of other posts -->
+    </div>
+    <% }) %>
+
+    <div class="d-grid gap-2 d-md-block">
+      <a
+        class="btn btn-outline-primary btn-sm button-logout"
+        href="/logout"
+        role="button"
+        >Log Out</a
+      >
+    </div>
+  </main>
+</section>
+
+<%- include("./partials/footer"); -%>
